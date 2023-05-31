@@ -56,7 +56,6 @@ const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
 const btn3 = document.getElementById("btn3");
 const btn4 = document.getElementById("btn4");
-const getscore = document.getElementById("score");
 const setscore = document.getElementById("end-score");
 const set_endtext1 = document.getElementById("end-text1");
 const set_endtext2 = document.getElementById("end-text2");
@@ -96,7 +95,6 @@ function selectans(e){
     if(iscorrect){
         selectbtn.classList.add("correct");
         score++;
-        getscore.innerText = score;
     }
     else{
         selectbtn.classList.add("incorrect");
