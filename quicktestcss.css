@@ -108,10 +108,10 @@ body{
     margin-top: 5px;
     margin-bottom:5px ;
 }
-button:hover:not([disabled]){
+/*button:hover:not([disabled]){
     background-color: #abcae4;
     transition: 0.2s;
-}
+}*/
 button:disabled{
     color:black;
     cursor: no-drop;
