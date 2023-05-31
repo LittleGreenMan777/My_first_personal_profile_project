@@ -1,0 +1,30 @@
+body{
+    background-color: #f5f8fc;
+}
+.cover_page{
+    max-width:450px;
+    background-color: #abcae4;
+    border: solid rgb(90, 149, 222);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height:100%;
+    width: 100%;
+    padding-top: 50px;
+}
+button{
+    font-size: 21px;
+    width: 85%;
+    height: 46px;
+    background-color: white;
+    padding :6px 12px 6px 12px;
+    border: solid 2px;
+    border-radius: 10px;
+    margin-top:20px;
+}
+.options{
+    background-color: white;
+    height: auto;
+    width: 300px;
+}

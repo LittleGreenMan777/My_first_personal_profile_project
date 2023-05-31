@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 40px;
+            height: 10px;
+            background-color: rgb(67, 166, 236,0.5);
+            margin: 10px;
+            padding:50px;
+            text-align: center;
+         } 
+         .container{
+            display: flex;
+            /* justify-content: flex-end; */
+            align-items: baseline;
+         }
+         #box2{
+            align-self: center;
+         }
+         .bbb{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(238, 153, 100);
+            border: solid 1px;
+            
+         }
+         .bbb:hover{
+            background-color: black;
+            color: blanchedalmond;
+            transition:all 0.2s linear ;
+         }
+         @media screen and (min-width :800px) {
+                .bbb{background-color:green;}
+         }
+    </style>
+    <!--
+    <style>
+        .box{
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: auto;
+            padding:50px;
+            background-color: rgb(67, 166, 236,0.5);
+            
+        }
+        .main{
+            background-color: white;
+            width: max-content;
+            height: 200px;
+        }
+        .b2{
+            position: relative;
+            top:50px;
+            left:60px;
+        }
+    </style>
+    <h1>我的專案</h1>
+    <hr size="3px" color="black">
+
+    <div class="main">
+        <div class="box">box1</div>
+        <div class="b2 box">box2</div>
+        <div class="box">box3</div>
+    </div>
+    <br>
+    <div style="margin-top: 50px;margin-bottom: 50px;">
+        <img style="display: inline; border:solid 2px rgb(95, 254, 95); clear: right;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAABhYWGlpaWGhoYwMDDc3Nz29va1tbX5+fmqqqrCwsJDQ0OLi4uwsLA/Pz+enp5UVFTZ2dnm5uZdXV3Jycl8fHzv7+9KSkrS0tI1NTW9vb1SUlInJyfw8PDU1NRwcHAQEBAYGBhoaGiVlZUkJCQODg4lJSWYmJg8/VuDAAAFp0lEQVR4nO2d6WLiIBCAJR71tvVaV9ceru3u+z/hajVmSBjCFSDsfD9bGPnMASEMdjoEQRAEQRAEQRAEQRAEQTTNz9ANaBz2sgzdhFpWVrUZY78id3xhE5vq7ErMx/H1eGng2SIAY3E7Lm/ty8wjsJw4z9Vh3rzjq2kIVhDhcZyB5r0ZxmCQXRYXU651cweGkbNN3pBNR6kbsi+Dzp8LsAh94ZVYVB03doZj/W+oUcYVwXf9IFz9rusmWtItC5ocglYZGnXYLTJcPBkFaZGhYRAyDIpPQ7vHbFN8Gm77+l2tPT4Ne5dbmXPH0WIvvz16NnTuuPq6xBzISng3dOu4uYU8SIoEMHTo+JxHnOFlghi6cnwvAr6ghQIZXh5EZz1LZtz8xOeP2Azdg5wWCRkin5ySIXuPy3Dft2T/UVHsCzr/YIZ7w88C/K4Y9gSlghn2DT8LkJUFhR1/QobILGE6hr+QUskY7rBSyRiiLwfJUAkyvEOGupDhDTJUggzvkKEuZHiDDJUgwztkqAsZ3iBDJcjwzn9m+GczsWSzi9vQNWRIhmSob9jvPGH8hOVOaLnOOnZDlCUst8bLZUrlghke8XAbWE6yyoIzRNMMghlKsgK4dcuSBAlg+IyXCmT4W7aKj/smJAUfhhK/QIZSP/7s+6wvJ/ULYljjx4eTXIY3wxq/AIa1fp0BjCZLwM0U/Lwb1vuVmiQruBb6ZaVkUa8raDOlVcIvIJh+Hta2fPv1aaiWCDCCwbQXTv+91voL/xLfSvZnEAtbfYAyrx76+AxPIJbuGs1JXhGMUqMzhEM2ychOyFtRdfr4Y3SGcGpiqFd1BZtxzK/62AzhIdRc+vbKeO53qdgMT9UmKjI6sRK3LLXIDOFjheYeCPuy4P1G1ZThzmzJKAyktwC1cgRzn6YM+6IP9A4Z2hh++hRBadLwbJBAAYLsrbMxrmybNDQAZMAws2xdIfEYwkPoMhczGsM5CIEl+BgRi+GkCHByeIp2ojE8FPWPJnuPSIjDEAjiaXaGRGEIrkGFyTNNYjAEbWhg9z5PhrJE3aKbmLq9x9zwZLjH90wp3gJqPtIDBh/4jiWeDK8JrULHp8cQXZR3pshE9vV4NBQ5PmbwdxbDmLP0G/JqWHHM50anNqnd+asqZHLVsyHnOLrP32fSPRFqeCrmBU7C88C74aXA8EbeC84mh6E5X/CzRadCAMMmEQwYEjNk78kbsspeLskZVnbwDGDYw1dDaTN6YxVKfX8AQ9niA224l/7flLuM4IaWz7tlw2q3H9xweVLdhnoo6tBLhoKhW3DDSxP3So5n4dMjbyhaIhaDIWP9esfv0adk6P6NaPgXh2HtccxHn5XVJ+0xlDsWHosR9p/4DS/nKvYMdYDxV1j1FhgqcsCrJ2LIBUjTEK7pTtQQbM7WNsPncVfAnFVpqyEySK34FX1G2wyROe+y4BapnozhHKueiOHHAK2eiOEZr56IoayzIUMyRCFDMiRDMiRDMqyHDJUNV+LE+4QMVSBDMozfsCepHr1hJl4yw03ql371tlWGa3RpFKhcfr/WIkPcD8Rv8ftDmd8jvmj5ZksM5X73+OIluC0wXNb6fcfHlhi3wHCl8IuLkp+dbIGhJWRIhoqQIW+4no/dcY7RsEHIkAzjNxSNHvwb9l5H7oBb0rAv4f58vg17jhPwQG+B7D/o19C1X2EoPn5XfBq698sNcT+fhk343Q0lft4M+834XQ1lx++KJ0PHOfYFg9rE6hhyuZuFDJUgw6CQoRJkGBQyVIKLgc/ehmHs3HCRxcXCuWHckCEZXkn/Okz/Xpp+f0iGvvnPDE03vGuLofmGfu0wtNmwkDOUba8Xgq69H2e4fXXUMGd07f2A4dbp7rFu6LrYUDNiv4uh5u71QiI9Px0S7fFzRup+nY7L7bcJgiAIgiAIgiDazT/iOG+c/fBWuAAAAABJRU5ErkJggg==">
+        <h3 style="display:inline;">這是一張圖。</h3>
+    </div>
+-->
+    <div class="container" style="border :solid black ;height: 300px;">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+        <!-- <div class="box" id="box5">Box 5</div>
+        <div class="box" id="box6">Box 6</div>
+        <div class="box" id="box7">Box 7</div>
+        <div class="box" id="box8">Box 8</div>
+        <div class="box" id="box9">Box 9</div>
+        <div class="box" id="box10">Box 10</div> -->
+    </div>
+    <br>
+    <div style="width:200px;height: 100px;background-color: rgb(160, 160, 67);
+    transform: translate(50px,100px);transform: scale(0.8,0.6); 
+    transform: rotate(30deg);">
+
+    </div><br>
+    <button class="bbb">bububutton</button>
+</body>
+</html>
