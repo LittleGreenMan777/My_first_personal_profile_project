@@ -10,37 +10,39 @@
 <body>
     <div class="page active" id="mainpage">
         <div class="topbar">
-            <div style="font-size: 35px; margin: 5px; font-weight: 600;">我的日記</div>
+            <div style="font-size: 35px; margin: 5px; font-weight: 600;">日記</div>
             <button class="addbtn" id="addbutton">+</button>
         </div>
         
         <hr size="3px" color="black">
         <!--日記內容-->
         <div id="list">
-            <div class="article">
-                <p><h2>我完成了日記</h2>好爽我終於有一個像樣的日記了 我看了很多影片才學會如何做出按+號出現新的視窗</p>
-                <h5>2023/4/19</h5> 
-                <hr size="2px" color="black">
-            </div>
-            <div class="article">
-                <p><h2>Hello</h2>好想睡覺</p>
-                <h5>2023/3/30</h5> 
-                <hr size="2px" color="black">
-            </div> 
-            <div class="article">
-                <p><h2>ashley</h2>我今天衰爆了nmsl我討厭全世界除了pongpong!!!</p>
-                <h5>2023/3/30</h5> 
-                <hr size="2px" color="black">
-            </div> 
             <div  class="article">      
                 <p><h2>吳佳昇</h2>今天吳佳昇教我onclick的用法 水啦</p>
-                <h5>2023/3/30</h5> 
-                <hr size="2px" color="black">
+                <label>Victor&nbsp;&nbsp;</label><label>2023/3/30</label> 
+                <hr>
             </div>
             <div  class="article">      
                 <p><h2>HI</h2>今天天氣真爛</p>
-                <h5>2023/3/30</h5> 
-                <hr size="2px" color="black">
+                <label>Victor&nbsp;&nbsp;</label><label>2023/3/30</label> 
+                <hr>
+            </div>
+            <div class="article">
+                <p><h2>ashley</h2>我今天衰爆了nmsl我討厭全世界除了pongpong!!!</p>
+                <label>ash&nbsp;&nbsp;</label><label>2023/3/30</label>
+                <hr>
+            </div>
+            <div class="article">
+                <h2>Hello</h2>
+                <p>好想睡覺</p>
+                <label>Victor&nbsp;&nbsp;</label><label>2023/3/30</label>
+                <hr>
+            </div> 
+            <div class="article">
+                <h2>我完成了日記</h2>
+                <p>好爽我終於有一個像樣的日記了 我看了很多影片才學會如何做出按+號出現新的視窗</p>
+                <label>嘿嘿&nbsp;&nbsp;</label><label>2023/4/19</label> 
+                <hr>
             </div>
         </div>
             
@@ -56,8 +58,9 @@
             <div style="font-size: 25px;font-weight:800;">標題</div>
             <textarea id="title" placeholder="請輸入標題" type="text"></textarea><br>
             <div style="font-size: 25px;font-weight:800;">內容</div>
-            <textarea rows=6 id="content" placeholder="請輸入內容"></textarea>
-            <br>
+            <textarea rows=4 id="content" placeholder="請輸入內容"></textarea><br>
+            <div style="font-size: 25px;font-weight:800;">暱稱</div>
+            <textarea id="name" placeholder="請輸入你的暱稱" type="text"></textarea><br>
             <button id="send">新增</button>
         </div>
         
