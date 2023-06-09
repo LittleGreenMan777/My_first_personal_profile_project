@@ -12,39 +12,93 @@ startbtn.addEventListener("click",function(){
 ////////////////////////////////////
 const questions = [
     {
-        question:"我最喜歡的運動是什麼？",
+        question:"一英尺等於？",
         ans:[
-            {text:"籃球", correct:true},
-            {text:"排球", correct:false},
-            {text:"跑步", correct:false},
-            {text:"巧固球", correct:false}
+            {text:"2.2公分", correct:false},
+            {text:"22公分", correct:false},
+            {text:"0.0254公尺", correct:true},
+            {text:"25.4公分", correct:false}
         ]
     },
     {
-        question:"我最喜歡的一個NBA球隊是哪個？",
+        question:"中文的企鵝為什麼叫企鵝？",
         ans:[
-            {text:"勇士", correct:true},
-            {text:"湖人", correct:false},
-            {text:"塞爾提克", correct:false},
-            {text:"灰熊", correct:false}
+            {text:"他很有企圖心", correct:false},
+            {text:"penguin聽起來像企鵝", correct:false},
+            {text:"他們做事很有企劃", correct:false},
+            {text:"企有站著的意思，表示站著的鵝", correct:true}
         ]
     },
     {
-        question:"123",
+        question:"誰擁有最多Instagram追蹤數？",
         ans:[
-            {text:"123", correct:false},
-            {text:"456", correct:false},
-            {text:"456", correct:false},
-            {text:"789", correct:true}
+            {text:"巨石強森", correct:false},
+            {text:"Nike", correct:false},
+            {text:"Instagram", correct:true},
+            {text:"C羅", correct:false}
         ]
     },
     {
-        question:"企鵝為什麼叫企鵝？",
+        question:"下列哪個選項消耗了1度電？",
         ans:[
-            {text:"他很有", correct:false},
-            {text:"penguin", correct:false},
-            {text:"不知道", correct:false},
-            {text:"企有站", correct:true}
+            {text:"50W的電燈使用2小時", correct:false},
+            {text:"1000W的冰箱使用1小時", correct:true},
+            {text:"2000W的冷氣使用50分鐘", correct:false},
+            {text:"125W的電風扇使用800分鐘", correct:false}
+        ]
+    },
+    {
+        question:"奧地利的英文？",
+        ans:[
+            {text:"Austria", correct:true},
+            {text:"Australia", correct:false},
+            {text:"Vienna", correct:false},
+            {text:"Auckland", correct:false}
+        ]
+    },
+    {
+        question:"鹽度最高的海？",
+        ans:[
+            {text:"鴻海", correct:false},
+            {text:"波羅的海", correct:false},
+            {text:"紅海", correct:true},
+            {text:"死海", correct:false}
+        ]
+    },
+    {
+        question:"幾秒算一次觀看？",
+        ans:[
+            {text:"Tiktok：2秒", correct:false},
+            {text:"Youtube：10秒", correct:false},
+            {text:"Instagram：3秒", correct:true},
+            {text:"Spotify：10秒", correct:false}
+        ]
+    },
+    {
+        question:"甲酸又稱？",
+        ans:[
+            {text:"蟻酸", correct:true},
+            {text:"乙酸", correct:false},
+            {text:"檸檬酸", correct:false},
+            {text:"好酸", correct:false}
+        ]
+    },
+    {
+        question:"18÷2（1+2）=？",
+        ans:[
+            {text:"27", correct:true},
+            {text:"3", correct:false},
+            {text:"0", correct:false},
+            {text:"1", correct:false}
+        ]
+    },
+    {
+        question:"現在全世界大約有幾億人？",
+        ans:[
+            {text:"72", correct:false},
+            {text:"75", correct:false},
+            {text:"78", correct:false},
+            {text:"80", correct:true}
         ]
     }
 ]
@@ -99,8 +153,9 @@ function selectans(e){
     else{
         selectbtn.classList.add("incorrect");
     }
+
     Array.from(ansbtn.children).forEach(button =>{
-        if(button.dataset.correct == "true"){
+        if(button.dataset.correct === "true"){
             button.classList.add("correct");
         }
         button.disabled = true;
@@ -116,7 +171,7 @@ nextbtn.addEventListener("click",function(){
 })
 
 nextbtn.addEventListener("click" ,function(){
-    if(curindex>1){
+    if(curindex>questions.length-1){
         endquiz();
     }
     else{
@@ -132,9 +187,9 @@ function endquiz(){
         set_endtext1.innerText = "遜咖再加油吧👎";
         set_endtext2.innerText = "糟糕你不了解這個世界😥";
     }
-    else if(score<=8){
-        set_endtext1.innerText = "恭喜你有機會上大學🙃";
-        set_endtext2.innerText = "恭喜你對這個世界了解了一點點點";
+    else if(score<=7){
+        set_endtext2.innerText = "我相信你再做一次會更好🙃";
+        set_endtext1.innerText = "恭喜你對這個世界了解了一點點點";
     }
     else {
         set_endtext1.innerText = "Wow你真厲害!有像到我欸🤝";
