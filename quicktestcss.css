@@ -93,25 +93,27 @@ body{
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    width: 330px;
     height:190px ;
     border-bottom: 2px solid rgb(153, 153, 153);
     padding: 0px 0px 10px 20px;
     margin: 0px 10px 0px 10px;
 }
-.quiz-content button{
+.creatbtn{
     cursor: pointer;
     text-align: left;
-    width: 95%;
     font-size: 19px;
+    width: 95%;
+    height: 33px;
     border: 1px solid #abcae4;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom:5px ;
 }
-/*button:hover:not([disabled]){
+/* button:hover:not([disabled]){
     background-color: #abcae4;
     transition: 0.2s;
-}*/
+} */
 button:disabled{
     color:black;
     cursor: no-drop;
