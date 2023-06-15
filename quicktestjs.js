@@ -114,8 +114,21 @@ const setscore = document.getElementById("end-score");
 const set_endtext1 = document.getElementById("end-text1");
 const set_endtext2 = document.getElementById("end-text2");
 const qus_text = document.getElementById("qus-text");
+const pre_box = document.getElementById("prebox");
+const pre_score = document.getElementById("pre-score");
+const pre_btn = document.getElementById("pre-btn"); 
 
-
+const save_score = JSON.parse(localStorage.getItem("pre_score")) || -1;
+if(save_score==-1){
+    pre_box.classList.remove("active");
+}
+else{
+    pre_score.innerText = save_score;
+}
+pre_btn.addEventListener("click",function(){
+    infobox.classList.add("active");
+    pre_box.classList.remove("active");
+})
 let score = 0;
 let curindex = 0;
 
@@ -183,6 +196,7 @@ function endquiz(){
     quizbox.classList.remove("active");
     endbox.classList.add("active");
     setscore.innerText = "恭喜你答對了 "+score+" 題";
+    localStorage.setItem("pre_score",JSON.stringify(score));
     if(score<=2){
         set_endtext1.innerText = "遜咖再加油吧👎";
         set_endtext2.innerText = "糟糕你不了解這個世界😥";
@@ -196,3 +210,6 @@ function endquiz(){
         set_endtext2.innerText = "恭喜你對這個世界了解了一點";
     }
 }
+
+
+
