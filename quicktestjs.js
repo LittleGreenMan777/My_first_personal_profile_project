@@ -120,6 +120,8 @@ const pre_btn = document.getElementById("pre-btn");
 
 const save_score = JSON.parse(localStorage.getItem("pre_score")) || -1;
 if(save_score==-1){
+    pre_box.classList.remove("active");
+    infobox.classList.add("active");
 }
 else{
     pre_score.innerText = save_score;
