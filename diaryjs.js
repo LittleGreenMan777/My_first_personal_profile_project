@@ -84,7 +84,7 @@ comments.forEach(createcomment);
 
 send.addEventListener("click",()=>{
 
-    if(titleinput.value=="" | contentinput.value=="" | nameinput==""){
+    if(titleinput.value=="" | contentinput.value=="" | nameinput.value==""){
     }
     else{
         const newcomment = addcomment(
