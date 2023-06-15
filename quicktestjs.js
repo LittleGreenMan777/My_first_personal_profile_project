@@ -118,8 +118,8 @@ const pre_box = document.getElementById("prebox");
 const pre_score = document.getElementById("pre-score");
 const pre_btn = document.getElementById("pre-btn"); 
 
-const save_score = JSON.parse(localStorage.getItem("pre_score")) || -1;
-if(save_score==-1){
+const save_score = localStorage.getItem("pre_score") || "-1";
+if(save_score=="-1"){
     pre_box.classList.remove("active");
     infobox.classList.add("active");
 }
